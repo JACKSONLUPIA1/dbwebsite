@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+  <header>
+    <h3>List Member</h3>
+  </header>
+  <div class="table-wrapper">
+    <table class="table-users">
+      <tr>
+        <th>Firts Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Action</th>
+      </tr>
+    </table>
+    <button class="btn btn-add">Add User</button>
+  </div>
+  <!-- Add Modal -->
+  <div class="add-modal modal-wrapper">
+    <div class="modal">
+      <div class="modal-header"><h3>Add New User</h3></div>
+      <div class="modal-body">
+        <form class="form" autocomplete="off">
+          <input type="text" name="firstName" placeholder="First Name">
+          <input type="text" name="lastName" placeholder="Last Name">
+          <input type="email" name="email" placeholder="Email">
+          <input type="text" name="message" placeholder="Message">
+          <button class="btn btn-modal">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="edit-modal modal-wrapper">
+    <div class="modal">
+      <div class="modal-header"><h3>Edit User</h3></div>
+      <div class="modal-body">
+        <form class="form" autocomplete="off">
+          <input type="text" name="firstName" placeholder="First Name">
+          <input type="text" name="lastName" placeholder="Last Name">
+          <input type="email" name="email" placeholder="Email">
+          <input type="text" name="message" placeholder="Message">
+          <input type="number" name="progress" placeholder="Status">
+          <button class="btn btn-modal">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Status Modal -->
+<!-- <div class="status-modal modal-wrapper">
+  <div class="modal">
+    <div class="modal-header"><h3>Edit Status</h3></div>
+    <div class="modal-body">
+      <form class="form" autocomplete="off">
+        <input type="number" name="progress" placeholder="Status">
+        <button class="btn btn-modal">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div> -->
+
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+  <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA9wxj6h2PxNRaAbngTqIU7syrQpvkYKdc",
+        authDomain: "db-test-1488d.firebaseapp.com",
+        projectId: "db-test-1488d",
+        storageBucket: "db-test-1488d.appspot.com",
+        messagingSenderId: "693723952794",
+        appId: "1:693723952794:web:105640f99b2dd861ef5123",
+        measurementId: "G-3Q4TG2ZV9E"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+  </script>
+  <script type="text/javascript" src="init.js"></script>
+  </body>
+</html>
